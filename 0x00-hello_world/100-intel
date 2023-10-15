@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -S $CFILE   
+gcc -m32 -S main.c -o main.s 
