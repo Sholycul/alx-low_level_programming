@@ -4,7 +4,7 @@
 
 /**
  * _strlen - check the code
- *
+ *@s: string for length
  * Return: the variable n.
  */
 
