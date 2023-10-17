@@ -16,7 +16,7 @@ void print_array(int *a, int n)
 
 	if (n <= 0)
 	{
-		printf("Invalid input for number of elements to print.\n");
+		printf("%d\n", a[1]);
 		return;
 	}
 	for (i = 0; i < n; i++)
