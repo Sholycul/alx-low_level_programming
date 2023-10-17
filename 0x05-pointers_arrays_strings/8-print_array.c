@@ -13,6 +13,12 @@
 void print_array(int *a, int n)
 {
 	int i;
+
+	if (n <= 0)
+	{
+		printf("Invalid input for number of elements to print.\n");
+		return;
+	}
 	for (i = 0; i < n; i++)
 	{
 		if (i != n - 1)
@@ -20,10 +26,8 @@ void print_array(int *a, int n)
 			printf("%d, ", a[i]);
 		} else
 		{
-			printf("%d", a[i]);
+			printf("%d\n", a[i]);
 		}
-
-		printf("\n");
 
 	}
 }
