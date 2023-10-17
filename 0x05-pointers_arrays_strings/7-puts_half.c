@@ -14,15 +14,13 @@
 void puts_half(char *str)
 {
 	int i;
-	int n = ((strlen(str) - 1)/2);
+	int len = strlen(str);
+	int start = (len + 1) / 2;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = start; i < len; i++)
 	{
-		if (i >= n)
-		{ 
-			putchar(str[i + 1]);
-		}
-	}
+		printf("%c", str[i]);
 
-	putchar('\n');
+	}
+	printf("\n");
 }
