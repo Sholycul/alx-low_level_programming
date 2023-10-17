@@ -14,6 +14,7 @@
 void puts2(char *str)
 {
 	char *ptr = str;
+
 	while (*ptr != '\0')
 	{
 		printf("%c", *ptr);
