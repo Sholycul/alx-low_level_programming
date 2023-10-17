@@ -10,15 +10,17 @@
  *
  * Return: None
  */
-
 void puts2(char *str)
 {
-	char *ptr = str;
+	int i;
 
-	while (*ptr != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		printf("%c", *ptr);
-		ptr += 2;
+		if (i % 2 == 0)
+		{
+			putchar(str[i]);
+		}
 	}
-	printf("\n");
+
+	putchar('\n');
 }
