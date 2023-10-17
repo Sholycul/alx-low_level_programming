@@ -2,10 +2,10 @@
 #include <string.h>
 
 /**
- * puts2 - Print every other character of a string
+ * puts_half - Print every other character of a string
  *
  * This function takes a string `str` and prints every other
- * character, starting with the first character, followed by a new line.
+ * character, starting with the middle character, followed by a new line.
  *
  * @str: Pointer to the string to be processed
  *
