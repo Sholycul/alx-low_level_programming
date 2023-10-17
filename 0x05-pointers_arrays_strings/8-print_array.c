@@ -9,25 +9,17 @@
  * up to n elements, separated by commas and followed by a space.
  * If it's the last element, no comma and space are added.
  */
-
 void print_array(int *a, int n)
 {
-	int i;
+	int  index;
 
-	if (n <= 0)
+	for (index = 0; index < n; index++)
 	{
-		printf("%d\n", a[0]);
-		return;
-	}
-	for (i = 0; i < n; i++)
-	{
-		if (i != n - 1)
+		printf("%d", a[index]);
+		if (index != (n - 1))
 		{
-			printf("%d, ", a[i]);
-		} else
-		{
-			printf("%d\n", a[i]);
+			printf(", ");
 		}
-
 	}
+	putchar('\n');
 }
