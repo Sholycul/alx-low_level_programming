@@ -11,14 +11,12 @@
  *
  * Return: None
  */
-
 void puts2(char *str)
 {
-	int i;
-
-	for (i = 0; str[i] != 0; i += 2)
-	{
-		printf("%c", str[i]);
-	}
-	printf("\n");
+    while (*str != '\0')
+    {
+        printf("%c", *str);
+        str += 2;
+    }
+    printf("\n");
 }
