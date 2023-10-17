@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-/*
- * puts2: function to reverse string
+/**
+ * puts2 - Reverse string in two
  *
- * this function take in string s and reverses it in two
+ * This function takes in a string `str` and prints every
+ * other character, starting with the first character.
  *
+ * @str: Pointer to the string to be processed
  *
- *
- * Return: none
+ * Return: None
  */
 
 void puts2(char *str)
