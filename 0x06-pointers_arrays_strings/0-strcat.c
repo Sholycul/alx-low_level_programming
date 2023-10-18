@@ -14,7 +14,5 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *concat = strcat(dest, src);
-
-	return (concat);
+	 return strcat(dest, src);
 }
