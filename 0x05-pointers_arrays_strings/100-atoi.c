@@ -1,33 +1,46 @@
 #include <stdio.h>
 #include <limits.h>
+/**
+ * _atoi - The function that returns the integer value of a string
+ *
+ * @s: The string const to be converted
+ *
+ * Return: sign * result
+ */
 
 
-int _atoi(char *s) {
+int _atoi(char *s)
+{
     int result = 0;
     int sign = 1;
 
-    while (*s == ' ') {
+    while (*s == ' ')
+    {
         s++;
     }
 
-    if (*s == '-') {
+    if (*s == '-')
+    {
         sign = -1;
         s++;
-    } else if (*s == '+') {
+    } else if (*s == '+')
+    {
         s++;
     }
 
-    while (*s >= '0' && *s <= '9') {
+    while (*s >= '0' && *s <= '9')
+    {
         int digit = *s - '0';
 
-        if (result > (INT_MAX - digit) / 10) {
+        if (result > (INT_MAX - digit) / 10)
+       	{
             return (sign == 1) ? INT_MAX : INT_MIN;
         }
 
-        result = result * 10 + digit;
+        result = (result * 10) + digit;
         s++;
     }
 
-    return sign * result;
+    return (sign * result);
 }
 
