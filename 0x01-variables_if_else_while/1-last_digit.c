@@ -2,10 +2,13 @@
 #include <stdio.h>
 #include <time.h>
 
- /**
- * main - Greater and Less than 5 or 6, this is he last number of the "n"
- * Return: 0 for success
+/**
+ * main - main function for printing
+ *
+ *
+ * Return: Always 0;
  */
+
 int main(void)
 {
 	int n;
