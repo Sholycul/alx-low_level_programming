@@ -1,46 +1,42 @@
+#include <ctype.h>
 #include <stdio.h>
-#include <limits.h>
-/**
- * _atoi - The function that returns the integer value of a string
+
+/*
+ * is_digit - checks if a character is a digit
  *
- * @s: The string const to be converted
+ * @c: the character to check
  *
- * Return: sign * result
+ * Return: 1 if `c` is a digit, 0 otherwise
  */
 
+int is_digit(char c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+/*
+ * _atoi - converts a string to an integer
+ *
+ * @s: the input string
+ *
+ * Return: the integer value of the string
+ */
 
 int _atoi(char *s)
 {
-    int result = 0;
-    int sign = 1;
+	int result = 0;
+	int i = 0;
 
-    while (*s == ' ')
-    {
-        s++;
-    }
+	while (!is_digit(s[i]) && s[i] != '\0')
+	{
+		i++;
+	}
 
-    if (*s == '-')
-    {
-        sign = -1;
-        s++;
-    } else if (*s == '+')
-    {
-        s++;
-    }
+	while (is_digit(s[i]))
+	{
+		result = result * 10 + (s[i] - '\0');
+		i++;
+	}
 
-    while (*s >= '0' && *s <= '9')
-    {
-        int digit = *s - '0';
-
-        if (result > (INT_MAX - digit) / 10)
-       	{
-            return (sign == 1) ? INT_MAX : INT_MIN;
-        }
-
-        result = (result * 10) + digit;
-        s++;
-    }
-
-    return (sign * result);
+	return (result);
 }
-
