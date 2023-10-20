@@ -16,6 +16,8 @@ char *string_toupper(char *);
 char *cap_string(char *);
 
 char *leet(char *);
+
+char *rot13(char *);
 /* Content of main.h goes here */
 
 #endif /* MAIN_H */
