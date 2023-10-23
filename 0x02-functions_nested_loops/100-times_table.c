@@ -1,51 +1,46 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_times_table - This is a absolute value
+ * print_times_table - Prints the n times table
  *
- * @n: This is the entry
+ * @n: number times table (0 < n <= 15)
  *
- * Return: Always 0.
+ * Return: no return
  */
-
 void print_times_table(int n)
 {
+	int a, b, op;
+
 	if (n >= 0 && n <= 15)
 	{
-		int b, c, d;
-		for (c = 0; c <= n; c++)
+		for (a = 0; a <= n; a++)
 		{
-			for (b = 0; b <= n; b++)
+			_putchar(48);
+			for (b = 1; b <= n; b++)
 			{
-				d = b * c;
-
-				if (b == 0)
-					_putchar(d + '0');
-				else if (d <= 9)
+				op = a * b;
+				_putchar(44);
+				_putchar(32);
+				if (op <= 9)
 				{
 					_putchar(32);
 					_putchar(32);
-					_putchar(d + '0');
+					_putchar(op + 48);
 				}
-				else if (d >= 10 && d <= 99)
+				else if (op <= 99)
 				{
 					_putchar(32);
-					_putchar(((d / 10) % 10) + '0');
-					_putchar((d % 10) + '0');
+					_putchar((op / 10) + 48);
+					_putchar((op % 10) + 48);
 				}
 				else
 				{
-					_putchar((d / 100) + '0');
-					_putchar(((d / 10) % 10) + '0');
-					_putchar((d % 10) + '0');
-				}
-				if (b != n)
-				{
-					_putchar(',');
-					_putchar(32);
+					_putchar(((op / 100) % 10) + 48);
+					_putchar(((op / 10) % 10) + 48);
+					_putchar((op % 10) + 48);
 				}
 			}
-		_putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
