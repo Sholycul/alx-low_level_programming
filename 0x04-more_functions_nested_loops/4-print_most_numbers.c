@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints numbers between 0 to 9
- * (neither 2 nor 4).
- * Return: no return.
+ * print_line -  Write a function that draws a straight line in the terminal
+ *
+ * @n: this is the entry
+ *
+ *
  */
-void print_most_numbers(void)
-{
-	int ch;
 
-	for (ch = 48; ch < 58; ch++)
+void print_line(int n)
+{
+	int count;
+
+	for (count = 1; n >= 1 && count <= n; count++)
 	{
-		if (ch != 50 && ch != 52)
-			_putchar(ch);
+		_putchar(95);
 	}
 	_putchar('\n');
 }
