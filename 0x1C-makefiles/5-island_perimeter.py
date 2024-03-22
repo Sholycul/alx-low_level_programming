@@ -7,8 +7,7 @@ Module for Island Perimeter
 
 def island_perimeter(grid):
     """
-    island_perimeter function calculates the perimeter of the island
-    described in the grid.
+    Calculate the perimeter of the island described in the grid.
 
     Parameters:
     - grid: List of lists of integers representing the island.
